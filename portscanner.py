@@ -2,7 +2,7 @@ import socket
 
 for port in range(1, 9000):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    result = sock.connect_ex(("192.168.88.253", port))
+    result = sock.connect_ex(("192.168.*.*", port))
     if result == 0:
         print("Port " + str(port) + " is open")
     else:
